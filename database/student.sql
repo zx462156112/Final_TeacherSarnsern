@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.3
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Mar 12, 2020 at 06:48 AM
--- Server version: 5.7.26
--- PHP Version: 7.4.1
+-- Host: 127.0.0.1
+-- Generation Time: Mar 12, 2020 at 10:25 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -1143,7 +1145,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'san', 'san@gmail.com', NULL, '$2y$10$jzBtNtKD4TS4.bsk84GH6uE3S7Bf2sxuVMg3LO0Alqit2ieBrhLyq', NULL, '2020-02-26 13:29:52', '2020-02-26 13:29:52'),
+(1, 'san', 'san@gmail.com', NULL, '$2y$10$jzBtNtKD4TS4.bsk84GH6uE3S7Bf2sxuVMg3LO0Alqit2ieBrhLyq', 'txDWMUCRbfVYthFMNrhQwAnMxkPT6d4vP2tZxSUyPwTkYznDD289yWZ9hODY', '2020-02-26 13:29:52', '2020-02-26 13:29:52'),
 (2, 's', 'sansern@gmail.com', NULL, '$2y$10$pBauua5fmDRRZTWps3XvvOSLj1y79F.pr/poEDVSmNjJSAYmnGaWy', NULL, '2020-03-12 02:39:24', '2020-03-12 02:39:24');
 
 --
@@ -1214,6 +1216,7 @@ ALTER TABLE `migrations`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
