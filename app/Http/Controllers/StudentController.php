@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Student;
 
 class StudentController extends Controller
 {
@@ -13,7 +14,13 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        $student = Student::all();
+        //student = Student::orderBy('stu_group_id','desc')->get();
+        $count = Student::count();
+        return view('student.index', [
+            'student' => '$student',
+            'count' => $count
+        ]);
     }
 
     /**

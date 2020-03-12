@@ -2,19 +2,25 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="row ">
+        <div class="col-lg-10 col-lg-offset-1">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header h3">แสดงรายชื่อนักศึกษา</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                  ระบบการจัดการข้อมูลนักศึกษา
+                    
+                    <table class = "table table-striped">
+                        <tr>
+                            <th>คำนำหน้า</th>
+                            <th>ชื่อ</th>
+                            <th>สกุล</th>
+                            <th>รหัสประจำตัว</th>
+                            <th>รหัสกลุ่ม</th>
+                            <th>สาขา</th>
+                            <th>คณะ</th>
+                        </tr>
+                       
+                    </table>
                 </div>
             </div>
         </div>
